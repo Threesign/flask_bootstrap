@@ -1,8 +1,10 @@
 from flask import Flask, render_template, redirect, session, flash, url_for, Markup, request, g
 from functools import wraps
 import sqlite3
+import os
 
-DATABASE = '/home/AndreRoukema/mysite/sales.db'
+folder = '' if os.path.isdir(r'c:\Anaconda3') else '/home/AndreRoukema/mysite/'
+DATABASE = '{folder}sales.db'.format(folder=folder)
 
 app = Flask(__name__)
 app.config.from_object(__name__)
