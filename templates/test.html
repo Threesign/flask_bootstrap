@@ -1,0 +1,8 @@
+{% extends "template.html" %}
+{% block content %}
+    <h2>Sample!</h2>
+    {% for message in get_flashed_messages() %}
+      <p>{{ message }}</p>
+    {% endfor %}
+    <p>Ik meen het</p>
+{% endblock %}
