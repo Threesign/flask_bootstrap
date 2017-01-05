@@ -3,6 +3,8 @@ from functools import wraps
 import sqlite3
 import os
 
+#The path to the database depends on wether you run locally or remote.
+
 folder = '' if os.path.isdir(r'c:\Anaconda3') else '/home/AndreRoukema/mysite/'
 DATABASE = '{folder}sales.db'.format(folder=folder)
 
